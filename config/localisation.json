@@ -3866,6 +3866,111 @@
         }
       ]
     },
+    "ID": {
+      "name": "Indonesia",
+      "bank_holidays": [
+        {
+          "date": "2018-01-01",
+          "name": "Tahun Baru Masehi"
+        },
+        {
+          "date": "2018-02-16",
+          "name": "Tahun Baru Imlek"
+        },
+        {
+          "date": "2018-03-17",
+          "name": "Hari Raya Nyepi"
+        },
+        {
+          "date": "2018-03-30",
+          "name": "Hari Paskah"
+        },
+        {
+          "date": "2018-04-14",
+          "name": "Isra Mi'raj"
+        },
+        {
+          "date": "2018-05-01",
+          "name": "Hari Buruh"
+        },
+        {
+          "date": "2018-05-10",
+          "name": "Kenaikan Yesus Kristus"
+        },
+        {
+          "date": "2018-05-29",
+          "name": "Hari Raya Waisak"
+        },
+        {
+          "date": "2018-06-01",
+          "name": "Hari Pancasila"
+        },
+        {
+          "date": "2018-06-11",
+          "name": "Cuti Bersama Idul Fitri"
+        },
+        {
+          "date": "2018-06-12",
+          "name": "Cuti Bersama Idul Fitri"
+        },
+        {
+          "date": "2018-06-13",
+          "name": "Cuti Bersama Idul Fitri"
+        },
+        {
+          "date": "2018-06-14",
+          "name": "Cuti Bersama Idul Fitri"
+        },
+        {
+          "date": "2018-06-15",
+          "name": "Hari Raya Idul Fitri"
+        },
+        {
+          "date": "2018-06-16",
+          "name": "Hari Raya Idul Fitri"
+        },
+        {
+          "date": "2018-06-18",
+          "name": "Cuti Bersama Idul Fitri"
+        },
+        {
+          "date": "2018-06-19",
+          "name": "Cuti Bersama Idul Fitri"
+        },
+        {
+          "date": "2018-06-20",
+          "name": "Cuti Bersama Idul Fitri"
+        },
+        {
+          "date": "2018-06-27",
+          "name": "Pilkada"
+        },
+        {
+          "date": "2018-08-17",
+          "name": "Hari Kemerdekaan"
+        },
+        {
+          "date": "2018-08-22",
+          "name": "Hari Raya Idul Adha"
+        },
+        {
+          "date": "2018-09-11",
+          "name": "Tahun Baru Hijriah"
+        },
+        {
+          "date": "2018-11-20",
+          "name": "Maulid Nabi Muhammad SAW"
+        },
+        {
+          "date": "2018-12-24",
+          "name": "Cuti Bersama Natal"
+        },
+        {
+          "date": "2018-12-25",
+          "name": "Hari Raya Natal"
+        }
+      ]
+    },
     "IE": {
       "name": "Ireland",
       "bank_holidays": [
