@@ -1,14 +1,14 @@
 
 {{> header }}
 
-<h1>Departments</h1>
+<h1>Departemen</h1>
 
 {{> show_flash_messages }}
 
 <div class="row">
-  <div class="col-md-4 lead">All departments</div>
+  <div class="col-md-4 lead">Semua departemen</div>
   <div class="col-md-4 col-md-offset-4">
-    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#add_new_department_modal" type="button" id="add_new_department_btn">Add new department</button>
+    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#add_new_department_modal" type="button" id="add_new_department_btn">Tambahkan departemen baru</button>
   </div>
 </div>
 
@@ -18,7 +18,7 @@
 
 {{# unless departments.length }}
 <div class="row">
-    <div class="col-md-4">No department records</div>
+    <div class="col-md-4">Tidak ada data departemen</div>
 </div>
 {{/unless}}
 
@@ -28,14 +28,14 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Manager</th>
-          <th>Allowance</th>
-          <th>Number Employees</th>
-          <th>Public Holidays
+          <th>Nama</th>
+          <th>Manajer</th>
+          <th>Jatah Cuti</th>
+          <th>Banyaknya Karyawan</th>
+          <th>Hari Libur Nasional
             <button type="button"
               class="btn btn-xs btn-link"
-              data-content="If set YES, employees from department have Bank Holidays added on top of allowance"
+              data-content="Jika disetel YA, hari libur nasional akan ditambahkan di atas jatah cuti karyawan departemen"
               data-placement="top"
               data-toggle="popover"
               data-trigger="focus hover"
@@ -43,10 +43,10 @@
               <span class="fa fa-question-circle"> </span>
             </button>
           </th>
-          <th>Accrued Allowance
+          <th>Jatah Cuti Terakumulasi
             <button type="button"
               class="btn btn-xs btn-link"
-              data-content="If set YES, holiday allowance starts to build up - or accrue - from the first day of employment. It accrues in proportion to the annual entitlement. E.g. an employee in the ninth month of employment would have built up 9/12ths (or three-quarters) of annual entitlement."
+              data-content="Jika disetel YA, jatah cuti liburan terus bertambah - atau terakumulasi - sejak hari pertama kerja. Jatah cuti terakumulasi secara proporsional terhadap jatah tahunan. Cth. seorang karyawan pada bulan kerja kesembilan akan telah mengumpulkan 9/12 (atau tiga perempat) jatah tahunan."
               data-placement="top"
               data-toggle="popover"
               data-trigger="focus hover"

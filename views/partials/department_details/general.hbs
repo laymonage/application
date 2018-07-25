@@ -4,33 +4,33 @@
 <div class="col-md-7">
 
   <ol class="breadcrumb">
-    <li><a href="/settings/departments/" data-vpp-all-departments-link="1">All departments</a></li>
+    <li><a href="/settings/departments/" data-vpp-all-departments-link="1">Semua departemen</a></li>
     <li class="active">{{ department.name }}</li>
   </ol>
 
   <div class="form-group">
-    <label for="name" class="control-label">Name</label>
+    <label for="name" class="control-label">Nama</label>
     <input class="form-control" id="name" name="name" required value="{{department.name}}">
   </div>
 
 
   <div class="form-group">
-    <label for="manager_id" class="control-label">Manager</label>
+    <label for="manager_id" class="control-label">Manajer</label>
     <select class="form-control" name="boss_id" id="manager_id">
     {{#each company.users}}
       <option value="{{this.id}}" {{#if_equal ../department.bossId this.id }} selected="selected"{{/if_equal}}>{{this.full_name}}</option>
     {{/each}}
     </select>
-    <span class="help-block">Head of {{department.name}} department. Main manager. <a href="/users/edit/{{department.bossId}}/">More details <i class="fa fa-angle-double-right"></i></a></span>
+    <span class="help-block">Kepala departemen {{department.name}}. Manajer utama. <a href="/users/edit/{{department.bossId}}/">Detail selengkapnya <i class="fa fa-angle-double-right"></i></a></span>
   </div>
 
   <div class="form-group">
-    <label class="control-label">Secondary supervisors (BETA)</label>
+    <label class="control-label">Pengawas sekunder (BETA)</label>
     <ul class="list-group no-bottom-space">
       {{# each department.supervisors }}
 
       <li class="list-group-item">
-        <span><a href='/users/edit/{{ this.id }}/'>{{ this.full_name }}</a> <button type="submit" name="remove_supervisor_id" value="{{this.id}}" class="pull-right btn btn-link btn-xs"><i class="fa fa-trash"></i> Remove</button><span>
+        <span><a href='/users/edit/{{ this.id }}/'>{{ this.full_name }}</a> <button type="submit" name="remove_supervisor_id" value="{{this.id}}" class="pull-right btn btn-link btn-xs"><i class="fa fa-trash"></i> Hapus</button><span>
       </li>
       {{/ each }}
 
@@ -43,17 +43,17 @@
           data-department_id="{{department.id}}"
           data-department_name="{{department.name}}"
         >
-          <i class="fa fa-plus"></i> Add new secondary supervisor
+          <i class="fa fa-plus"></i> Tambahkan pengawas sekunder baru
         </a>
         <span>
       </li>
     </ul>
-    <span class="help-block">List of users who also could decide on leave requests from {{department.name}} department's employees.</span>
+    <span class="help-block">Daftar pengguna yang juga bisa memutuskan permohonan cuti dari pegawai departemen {{department.name}}.</span>
   </div>
 
 
   <div class="form-group">
-    <label for="allowance_select">Allowance</label>
+    <label for="allowance_select">Jatah cuti</label>
 
     <select class="form-control" name="allowance" id="allowance_select">
         {{#each allowance_options}}
@@ -65,24 +65,24 @@
   <div class="form-group">
     <label for="use_bank_holidays_inp" class="control-label">
       <input class="" id="use_bank_holidays_inp" name="include_public_holidays" type="checkbox" {{# if department.include_public_holidays}} checked="checked"  {{/if}} >
-      Include public holidays
+      Sertakan hari libur nasional
     </label>
-    <span class="help-block">Determine if employees from {{department.name}} have <a href="/settings/general"/>bank holidays</a> in addition to their allowance</span>
+    <span class="help-block">Menentukan apakah karyawan dari {{department.name}} memiliki <a href="/settings/general"/>hari libur nasional</a> ditambah dengan jatah cutinya</span>
   </div>
 
   <div class="form-group">
     <label for="is_accrued_allowance_inp" class="control-label">
       <input class="" id="is_accrued_allowance_inp" name="is_accrued_allowance" type="checkbox" {{# if department.is_accrued_allowance}} checked="checked" {{/if}} >
-      Accrued allowance
+      Jatah cuti terakumulasi
     </label>
-    <span class="help-block">If enabled, holiday allowance starts to build up - or accrue - from the first day of employment. It accrues in proportion to the annual entitlement. E.g. an employee in the ninth month of employment would have built up 9/12ths (or three-quarters) of annual entitlement.</span>
+    <span class="help-block">Jika diaktifkan, jatah cuti liburan terus bertambah - atau terakumulasi - sejak hari pertama kerja. Jatah cuti terakumulasi secara proporsional terhadap jatah tahunan. Cth. seorang karyawan pada bulan kerja kesembilan akan telah mengumpulkan 9/12 (atau tiga perempat) jatah tahunan.</span>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <button id="save_changes_btn" type="submit" class="btn btn-success pull-right">Save changes to department</button>
-    <a class="btn btn-link pull-right" href="/settings/departments/">Cancel</a>
+    <button id="save_changes_btn" type="submit" class="btn btn-success pull-right">Simpan perubahan pada departemen</button>
+    <a class="btn btn-link pull-right" href="/settings/departments/">Batal</a>
   </div>
 </div>
 

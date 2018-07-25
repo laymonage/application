@@ -12,9 +12,9 @@
     <p class="help-block">
       {{# with schedule }}
       {{# if (is_user_specific) }}
-        Current employee has <strong data-vpp="declare-user-specific-schedule">custom</strong> schedule.
+        Karyawan ini mempunyai jadwal <strong data-vpp="declare-user-specific-schedule">sendiri</strong>.
       {{else}}
-        Current employee uses <strong><a data-vpp="link-to-company-schedule" href="/settings/general/">company wide</a></strong> schedule.
+        Karyawan ini menggunakan jadwal <strong><a data-vpp="link-to-company-schedule" href="/settings/general/">umum kantor</a></strong>.
       {{/if}}
       {{/with}}
     </p>
@@ -28,10 +28,10 @@
     <div class="pull-right">
     {{# with schedule }}
     {{# if (is_user_specific) }}
-      <button type="submit" name="revoke_user_specific_schedule" class="btn btn-default">Move employee to company wide schedule</button>
-      <button type="submit" name="save_user_specific_schedule" class="btn btn-success">Save employee specific schedule</button>
+      <button type="submit" name="revoke_user_specific_schedule" class="btn btn-default">Pindahkan karyawan ke jadwal umum kantor</button>
+      <button type="submit" name="save_user_specific_schedule" class="btn btn-success">Simpan jadwal spesifik karyawan</button>
     {{else}}
-      <button type="submit" name="save_user_specific_schedule" class="btn btn-success">Override company wide schedule</button>
+      <button type="submit" name="save_user_specific_schedule" class="btn btn-success">Abaikan jadwal umum kantor</button>
     {{/if}}
     {{/with}}
     </div>

@@ -2,9 +2,9 @@
 
 {{> header }}
 
-<h1>General settings</h1>
+<h1>Setelan umum</h1>
 
-<p class="lead">Account main settings</p>
+<p class="lead">Setelan utama akun</p>
 
 {{> show_flash_messages }}
 
@@ -14,7 +14,7 @@
   <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Company
+        Kantor
       </div>
       <div class="panel-body">
         <div class="row">
@@ -22,13 +22,13 @@
           <div class="col-md-5">
             <form class="form-horizontal" method="POST" action="/settings/company/" id="company_edit_form">
               <div class="form-group">
-                <label for="input_company_name" class="col-md-4 control-label">Company name</label>
+                <label for="input_company_name" class="col-md-4 control-label">Nama kantor</label>
                 <div class="col-md-8">
-                  <input class="form-control" id="input_company_name" placeholder="Our company name" value="{{company.name}}" name="name">
+                  <input class="form-control" id="input_company_name" placeholder="Nama kantor kami" value="{{company.name}}" name="name">
                 </div>
               </div>
               <div class="form-group">
-                <label for="input_country" class="col-md-4 control-label">Country</label>
+                <label for="input_country" class="col-md-4 control-label">Negara</label>
                 <div class="col-md-8">
                   <select class="form-control" id="input_country" name="country">
                     {{#each countries}}
@@ -52,7 +52,7 @@
 
 
               <div class="form-group">
-                <label for="input_time_zone" class="col-md-4 control-label">Time zone</label>
+                <label for="input_time_zone" class="col-md-4 control-label">Zona waktu</label>
                 <div class="col-md-8">
                   <select class="form-control" id="input_time_zone" name="timezone">
                     {{#each timezones_available}}
@@ -67,17 +67,17 @@
                 <div class="col-md-offset-4 col-md-8">
                   <div class="checkbox">
                     <label for="share-all-absences">
-                      <input id="share-all-absences" type="checkbox" name="share_all_absences" {{# if company.share_all_absences }} checked="checked"{{/if}}>Share absences between all employees
+                      <input id="share-all-absences" type="checkbox" name="share_all_absences" {{# if company.share_all_absences }} checked="checked"{{/if}}>Bagikan absensi antarkaryawan
                     </label>
                     <p>
-                      <em>If enabled all employees can see information about everybody's absences regardless departments.</em>
+                      <em>Jika diaktifkan, semua karyawan bisa melihat informasi tentang absensi semua karyawan, tak peduli departemennya.</em>
                     </p>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                  <button type="submit" class="btn btn-success pull-right">Save changes</button>
+                  <button type="submit" class="btn btn-success pull-right">Simpan perubahan</button>
                 </div>
               </div>
             </form>
@@ -87,16 +87,16 @@
 
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="" class="col-md-7 control-label">Backup employees' leaves data</label>
+                <label for="" class="col-md-7 control-label">Cadangkan data cuti karyawan</label>
               </div>
               <div class="form-group">
                 <div class="col-md-offset-2">
-                  <em>Download list of employees with their leave requests ever. The file is in <strong>.CSV</strong> format which is compatible with MS Excel.</em>
+                  <em>Unduh daftar karyawan beserta riwayat permohonan cutinya. Berkasnya dalam format <strong>.CSV</strong>, yang kompatibel dengan MS Excel.</em>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-md-offset-2 col-md-11">
-                  <a class="btn btn-success pull-right" href="/settings/company/backup/"><i class="fa fa-download"></i> Download backup</a>
+                  <a class="btn btn-success pull-right" href="/settings/company/backup/"><i class="fa fa-download"></i> Unduh cadangan</a>
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@
             <form class="form-horizontal" method="POST" action="/settings/schedule" id="company_schedule_form">
             <input type="hidden" name="company_wide" value="1">
             <div class="form-group">
-              <label for="" class="col-md-6 control-label">Company week schedule</label>
+              <label for="" class="col-md-6 control-label">Jadwal mingguan kantor</label>
             </div>
             <div class="form-group">
               <div class="col-md-offset-2">
@@ -113,12 +113,12 @@
             </div>
             <div class="form-group">
               <div class="col-md-offset-2">
-                <em>Define company wide weekly schedule. Press correspondent button to toggle working/non-working day.</em>
+                <em>Tentukan jadwal mingguan kantor. Tekan tombol yang sesuai untuk mengatur hari kerja/libur.</em>
               </div>
             </div>
             <div class="form-group">
               <div class="col-md-offset-2 col-md-11">
-                <button type="submit" class="btn btn-success pull-right">Save schedule</button>
+                <button type="submit" class="btn btn-success pull-right">Simpan jadwal</button>
               </div>
             </div>
             </form>
@@ -135,7 +135,7 @@
   <div class="col-md-5">
     <div class="panel panel-default">
       <div class="panel-heading">
-        Bank Holidays
+        Hari Libur Nasional
       </div>
       <div class="panel-body">
         <form id="delete_bankholiday_form" method="post" action="/settings/bankholidays/delete/"></form>
@@ -143,15 +143,15 @@
         <form id="update_bankholiday_form" method="post" action="/settings/bankholidays/">
 
         <div class="row">
-          <div class="col-md-4"><label class="control-label">Date</label></div>
-          <div class="col-md-6"><label class="control-label">Holiday Name</label></div>
+          <div class="col-md-4"><label class="control-label">Tanggal</label></div>
+          <div class="col-md-6"><label class="control-label">Nama Hari Libur</label></div>
         </div>
 
         <div class="row">&nbsp;</div>
 
         {{# unless company.bank_holidays.length }}
         <div class="row">
-          <div class="col-md-4 tst-no-bank-holidays">No Bank holiday records</div>
+          <div class="col-md-4 tst-no-bank-holidays">Tidak ada data hari libur</div>
         </div>
         {{/unless}}
 
@@ -183,9 +183,9 @@
         <div class="row">
           <div class="col-md-12">
             <div class="pull-right">
-              <button id="bankholiday-import-btn" class="btn btn-default" type="button">Import default holidays</button>
-              <button class="btn btn-default" type="button" data-toggle="modal" data-target="#add_new_bank_holiday_modal" id="add_new_bank_holiday_btn">Add new</button>
-              <button type="submit" class="btn btn-success">Save changes</button>
+              <button id="bankholiday-import-btn" class="btn btn-default" type="button">Impor hari libur bawaan</button>
+              <button class="btn btn-default" type="button" data-toggle="modal" data-target="#add_new_bank_holiday_modal" id="add_new_bank_holiday_btn">Tambah baru</button>
+              <button type="submit" class="btn btn-success">Simpan perubahan</button>
             </div>
           </div>
         </div>
@@ -201,19 +201,19 @@
     <div class="panel panel-default">
 
       <div class="panel-heading">
-        Leave Types
+        Tipe Cuti
       </div>
 
       <div class="panel-body">
 
         <div class="row">
           <div class="col-md-6">
-            <label class="control-label">Leave Type Name</label>
-            <p><em>Tick one to always be on top of the list</em></p>
+            <label class="control-label">Nama Tipe Cuti</label>
+            <p><em>Centang satu untuk selalu diletakkan di paling atas</em></p>
           </div>
           <div class="col-md-offset-3 col-md-2">
-            <label class="control-label">Limit</label>
-            <p><em>Days/year</em></p>
+            <label class="control-label">Batas</label>
+            <p><em>Hari/tahun</em></p>
           </div>
         </div>
 
@@ -224,7 +224,7 @@
 
         {{# unless company.leave_types.length }}
         <div class="row">
-          <div class="col-md-4">No Leave type records</div>
+          <div class="col-md-4">Tidak ada data tipe cuti</div>
         </div>
         {{/unless}}
 
@@ -243,11 +243,11 @@
                 <input type="hidden" name="color__{{ this.id }}" value="{{# with this }}{{ this.get_color_class }}{{/with}}">
                 <button type="button" class="btn btn-default dropdown-toggle {{# with this }}{{ this.get_color_class }}{{/with}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paint-brush"></i></button>
                 <ul class="dropdown-menu">
-                  <li><a href="#" class="btn btd-default leave_type_color_1" data-tom-color-picker-css-class="leave_type_color_1">Color 1</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_2" data-tom-color-picker-css-class="leave_type_color_2">Color 2</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_3" data-tom-color-picker-css-class="leave_type_color_3">Color 3</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_4" data-tom-color-picker-css-class="leave_type_color_4">Color 4</a></li>
-                  <li><a href="#" class="btn btd-default leave_type_color_5" data-tom-color-picker-css-class="leave_type_color_5">Color 5</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_1" data-tom-color-picker-css-class="leave_type_color_1">Warna 1</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_2" data-tom-color-picker-css-class="leave_type_color_2">Warna 2</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_3" data-tom-color-picker-css-class="leave_type_color_3">Warna 3</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_4" data-tom-color-picker-css-class="leave_type_color_4">Warna 4</a></li>
+                  <li><a href="#" class="btn btd-default leave_type_color_5" data-tom-color-picker-css-class="leave_type_color_5">Warna 5</a></li>
                 </ul>
               </div>
 
@@ -256,7 +256,7 @@
           </div>
           <div class="col-md-3">
             <input name="use_allowance__{{ this.id }}" id="use_allowance__{{ this.id }}" type="checkbox" {{#if use_allowance}}checked="checked"{{/if}} data-tom-leave-type-order="allowance_{{@index}}">
-            <label for="use_allowance__{{ this.id }}" class="control-label">Use allowance</label>
+            <label for="use_allowance__{{ this.id }}" class="control-label">Gunakan jatah cuti</label>
           </div>
           <div class="col-md-2">
             <input type="number" class="form-control" value="{{limit}}" name="limit__{{ this.id }}" data-tom-leave-type-order="limit_{{@index}}">
@@ -275,8 +275,8 @@
         <div class="row">
           <div class="col-md-12">
             <div class="pull-right">
-              <button class="btn btn-default" data-toggle="modal" data-target="#add_new_leave_type_modal" type="button" id="add_new_leave_type_btn">Add new</button>
-              <button type="submit" class="btn btn-success">Save changes</button>
+              <button class="btn btn-default" data-toggle="modal" data-target="#add_new_leave_type_modal" type="button" id="add_new_leave_type_btn">Tambah baru</button>
+              <button type="submit" class="btn btn-success">Simpan perubahan</button>
             </div>
           </div>
         </div>
@@ -293,7 +293,7 @@
   <div class="col-md-12">
     <div class="panel panel-danger">
       <div class="panel-heading">
-        <i class="fa fa-bomb"></i> Danger zone
+        <i class="fa fa-bomb"></i> Zona bahaya
       </div>
       <div class="panel-body">
 
@@ -301,16 +301,16 @@
 
             <div class="form-horizontal">
               <div class="form-group">
-                <label for="" class="control-label">Remove company account</label>
+                <label for="" class="control-label">Hapus akun kantor</label>
               </div>
               <div class="form-group">
                 <div class="col-md-6">
-                  <p><em>Completely erase data associated with {{company.name}}'s account.</em></p>
-                  <p><em> This is irreversible action.</em></p>
-                  <p><em> It is strongly recommended to <a href="/settings/company/backup/">download</a> employees leave data first.</em></p>
+                  <p><em>Hapus bersih semua data terkait dengan akun {{company.name}}.</em></p>
+                  <p><em> Ini tidak dapat dikembalikan.</em></p>
+                  <p><em> Sangat disarankan untuk <a href="/settings/company/backup/">mengunduh</a> data cuti karyawan terlebih dahulu.</em></p>
                 </div>
                 <div class="col-md-6">
-                  <button class="btn btn-danger pull-right" data-toggle="modal" data-target="#remove_company_modal" type="button"><i class="fa fa-remove"></i> Delete company account</button>
+                  <button class="btn btn-danger pull-right" data-toggle="modal" data-target="#remove_company_modal" type="button"><i class="fa fa-remove"></i> Hapus akun kantor</button>
                 </div>
               </div>
             </div>

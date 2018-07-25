@@ -9,54 +9,54 @@
 }}
 
 <dl>
-  <dt>Allowance breakdown
+  <dt>Perincian jatah cuti
     <i class="fa fa-question-circle"
-      data-content="This is explanation how we get the total allowance. Hover on each number to get details what does one mean."
+      data-content="Ini adalah penjelasan cara kita mendapatkan total jatah cuti. Arahkan kursor ke setiap angka untuk mendapatkan detail apa maksudnya."
       data-placement="top"
       data-toggle="popover"
       data-trigger="focus hover"
     ></i>
   </dt>
     <dd>
-      <em>Nominal allowance </em>
+      <em>Jatah cuti </em>
       <span class="pull-right"
-        data-content="Allowance derived from department current user belongs to."
+        data-content="Jatah cuti berdasarkan departemen karyawan ini."
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
       >{{ user_allowance.nominal_allowance }}</span>
     </dd>
     <dd>
-      <em>Carried over from {{previous_year}}</em>
+      <em>Terbawa dari {{previous_year}}</em>
       <span class="pull-right"
-        data-content="Allowance carried over from previous year. Note: this amount is calculated on the very first day of the year."
+        data-content="Jatah cuti yang terbawa dari tahun sebelumnya. Catatan: jumlah ini dihitung pada hari pertama tahun."
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
       >{{ user_allowance.carry_over }}</span>
     </dd>
     <dd>
-      <em>Individual adjustment</em>
+      <em>Penyesuaian individual</em>
       <span class="pull-right"
-        data-content="Adjustment to allowance done by admin user."
+        data-content="Penyesuaian jatah cuti yang dilakukan oleh administrator."
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
       >{{ user_allowance.manual_adjustment }}</span>
     </dd>
     <dd>
-      <em>Start/end of employment</em>
+      <em>Mulai/akhir kerja</em>
       <span class="pull-right"
-        data-content="Automatic adjustment to allowance based on employee's start and end day of employment."
+        data-content="Penyesuaian otomatis pada jatah cuti berdasarkan hari mulai dan akhir kerja karyawan."
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
       >{{ user_allowance.employement_range_adjustment }}</span>
     </dd>
     <dd>
-      <em>Used so far</em>
+      <em>Telah digunakan</em>
       <span class="pull-right"
-        data-content="Number of days already taken from allowance."
+        data-content="Banyaknya hari yang telah digunakan dari jatah cuti."
         data-placement="top"
         data-toggle="popover"
         data-trigger="focus hover"
@@ -64,9 +64,9 @@
     </dd>
     {{# if user_allowance.is_accrued_allowance }}
       <dd>
-        <em>Locked so far</em>
+        <em>Telah terkunci</em>
         <span class="pull-right"
-          data-content="Number of unavailable days in allowance due to accrual nature of vacation entitlement."
+          data-content="Banyaknya hari tidak tersedia pada jatah cuti karena sifat akumulasi jatah libur."
           data-placement="top"
           data-toggle="popover"
           data-trigger="focus hover"

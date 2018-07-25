@@ -7,35 +7,35 @@
     <form id="leave_type_new_form" method="POST" action="{{form_action}}">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Add new Leave Type</h4>
+        <h4 class="modal-title">Tambahkan Tipe Cuti baru</h4>
       </div>
 
       <div class="modal-body">
 
         <div class="form-group">
-          <label for="leave_type_name_new" class="control-label">Name:</label>
+          <label for="leave_type_name_new" class="control-label">Nama:</label>
           <input type="text" class="form-control" id="leave_type_name_new" name="name__new" required>
         </div>
 
         <div class="form-group">
           <input type="checkbox" id="leave_type_use_allovance_new" name="use_allowance__new">&nbsp;
-          <label for="leave_type_use_allovance_new" class="control-label">Use allowance</label>
-          <p><em>If checked leaves of this type are going to be counted towards employee's annual holiday allowance.</em></p>
+          <label for="leave_type_use_allovance_new" class="control-label">Gunakan jatah cuti</label>
+          <p><em>Jika dicentang, cuti tipe ini akan menggunakan jatah cuti libur tahunan milik karyawan.</em></p>
         </div>
 
         <div class="form-group">
           <div class="dropdown" data-tom-color-picker="1">
             <input type="hidden" name="color__new" value="leave_type_color_1">
-            <button type="button" class="btn btn-default dropdown-toggle leave_type_color_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paint-brush"></i> Pick up color for new type</button>
+            <button type="button" class="btn btn-default dropdown-toggle leave_type_color_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-paint-brush"></i> Pilih warna untuk tipe cuti baru</button>
             <ul class="dropdown-menu">
-              <li><a href="#" class="btn btd-default leave_type_color_1" data-tom-color-picker-css-class="leave_type_color_1">Color 1</a></li>
-              <li><a href="#" class="btn btd-default leave_type_color_2" data-tom-color-picker-css-class="leave_type_color_2">Color 2</a></li>
-              <li><a href="#" class="btn btd-default leave_type_color_3" data-tom-color-picker-css-class="leave_type_color_3">Color 3</a></li>
-              <li><a href="#" class="btn btd-default leave_type_color_4" data-tom-color-picker-css-class="leave_type_color_4">Color 4</a></li>
-              <li><a href="#" class="btn btd-default leave_type_color_5" data-tom-color-picker-css-class="leave_type_color_5">Color 5</a></li>
+              <li><a href="#" class="btn btd-default leave_type_color_1" data-tom-color-picker-css-class="leave_type_color_1">Warna 1</a></li>
+              <li><a href="#" class="btn btd-default leave_type_color_2" data-tom-color-picker-css-class="leave_type_color_2">Warna 2</a></li>
+              <li><a href="#" class="btn btd-default leave_type_color_3" data-tom-color-picker-css-class="leave_type_color_3">Warna 3</a></li>
+              <li><a href="#" class="btn btd-default leave_type_color_4" data-tom-color-picker-css-class="leave_type_color_4">Warna 4</a></li>
+              <li><a href="#" class="btn btd-default leave_type_color_5" data-tom-color-picker-css-class="leave_type_color_5">Warna 5</a></li>
             </ul>
           </div>
-          <p><em>Determine how leaves of new type are going to be highlighted on Calendar/Team view pages.</em></p>
+          <p><em>Menentukan bagaimana cuti tipe baru ini akan disorot pada laman Kalender/Tinjauan tim.</em></p>
         </div>
 
 
@@ -43,13 +43,13 @@
         <div class="form-group">
           <label for="leave_type_limit_new" class="control-label">Limit:</label>
           <input type="number" class="form-control" id="leave_type_limit_new" name="limit__new">
-          <p><em>If set to non-zero value determines maximum number of days of new leave type each employee could take during the year.</em></p>
+          <p><em>Jika diisi nilai yang tidak nol kaan menentukan banyaknya hari maksimal yang bisa diambil oleh karyawan untuk tipe cuti baru ini pada tahun ini.</em></p>
         </div>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-        <button type="submit" class="btn btn-success">Create</button>
+        <button type="button" class="btn btn-link" data-dismiss="modal">Batal</button>
+        <button type="submit" class="btn btn-success">Tambahkan</button>
       </div>
     </form>
     </div>

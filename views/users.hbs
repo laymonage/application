@@ -1,22 +1,22 @@
 
 {{> header }}
 
-<h1>Staff</h1>
+<h1>Staf</h1>
 
 {{> show_flash_messages }}
 
 <div class="row">
-  <div class="col-md-3 lead">{{company.name}}'s staff</div>
+  <div class="col-md-3 lead">Staf {{company.name}}</div>
   <div class="col-md-3 col-md-offset-6">
     <div class="btn-group pull-right">
       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Add new employee
+        Tambahkan karyawan baru
         <span class="caret"></span>
-        <span class="sr-only">Toggle Dropdown</span>
+        <span class="sr-only">Aktifkan menu tarik-turun</span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="/users/import/" id="import_users_btn">Import employees</a></li>
-        <li><a href="/users/add/" id="add_new_department">Add single employee</a></li>
+        <li><a href="/users/import/" id="import_users_btn">Impor karyawan</a></li>
+        <li><a href="/users/add/" id="add_new_department">Tambahkan satu karyawan</a></li>
       </ul>
     </div>
     <form action="/users/" method="GET">
@@ -37,7 +37,7 @@
 <div class="row">&nbsp;</div>
 
 <div class="col-md-3 list-group all-departments">
-  <a href="/users/" class="list-group-item{{#unless department_id }} selected-item{{/unless}}">All departments</a>
+  <a href="/users/" class="list-group-item{{#unless department_id }} selected-item{{/unless}}">Semua departemen</a>
   {{#each company.departments}}
     <a class="list-group-item {{#if_equal ../department_id this.id}} selected-item{{/if_equal}}" href="/users/?department={{this.id}}">{{this.name}}</a>
   {{/each}}
@@ -47,11 +47,11 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Department</th>
-        <th>Is Administrator?</th>
-        <th>Available allowance</th>
-        <th>Days used</th>
+        <th>Nama</th>
+        <th>Departemen</th>
+        <th>Administrator?</th>
+        <th>Jatah cuti tersedia</th>
+        <th>Hari digunakan</th>
       </tr>
     </thead>
     <tbody>
@@ -59,7 +59,7 @@
       <tr data-vpp-user-row="{{this.user_id}}">
         <td class="user-link-cell"><a href="/users/edit/{{this.user_id}}/">{{this.user_full_name}}</a></td>
         <td class="user_department"><a href="/settings/departments/edit/{{ this.department_id }}/">{{this.department_name}}</a></td>
-        <td>{{# if this.is_admin }}Yes{{else}}{{/if}}</td>
+        <td>{{# if this.is_admin }}Ya{{else}}{{/if}}</td>
         <td class="vpp-days-remaining">{{ this.number_of_days_available_in_allowance }}</td>
         <td class="vpp-days-used">{{this.number_of_days_taken_from_allowance}}</td>
       </tr>

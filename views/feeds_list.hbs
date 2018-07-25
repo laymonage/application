@@ -1,9 +1,9 @@
 
 {{> header }}
 
-<h1>My feeds</h1>
+<h1>Umpan saya</h1>
 
-<p class="lead">Feeds for external calendars</p>
+<p class="lead">Umpan untuk kalender eksternal</p>
 
 {{> show_flash_messages }}
 
@@ -16,19 +16,19 @@
     <div class="row">
       <div class="col-md-12">
 
-        <p class="description-paragraph">Share you TimeOff.Management data with external calendar providers such as Microsoft Outlook, Apple Calendar (iCal) or Google Calendar.</p>
+        <p class="description-paragraph">Bagikan data TimeOff.Management Anda dengan penyedia kalender eksternal seperti Microsoft Outlook, Apple Calendar (iCal) atau Google Calendar.</p>
 
-        <p class="description-paragraph">We provide two streams from:</p>
+        <p class="description-paragraph">Kami menyediakan dua berkas dari:</p>
         <p class="description-paragraph">
-          <a href="/calendar/">My Calendar</a> page - feeds all data from My Calendar page
+          Laman <a href="/calendar/">Kalender Saya</a> - mengumpankan semua data dari laman Kalender Saya
         </p>
         <p class="description-paragraph">
-          <a href="/calendar/teamview/">Team view</a> page - feeds Team view data for current month
+          Laman <a href="/calendar/teamview/">Tinjauan Tim</a> - mengumpankan data Tinjauan Tim untuk bulan ini
         </p>
 
-        <p class="description-paragraph">To export particular feed into default calendar application just click on corresponding link.</p>
+        <p class="description-paragraph">Untuk mengekspor umpan ke aplikasi kalender bawaan, cukup klik pada tautan yang sesuai.</p>
 
-        <p class="description-paragraph">Otherwise copy link location and pass it to external application.</p>
+        <p class="description-paragraph">Sebaliknya, cukup salin tautannya dan tempel ke aplikasi eksternal.</p>
 
       </div>
     </div>
@@ -38,7 +38,7 @@
 
       <div class="col-md-5 well">
         <form method="POST" action="/calendar/feeds/regenerate/">
-        <a href="webcal://{{current_host}}/feed/{{calendar_feed.feed_token}}/ical.ics">My calendar feed <i class="fa fa-rss"></i></a>
+        <a href="webcal://{{current_host}}/feed/{{calendar_feed.feed_token}}/ical.ics">Umpan kalender saya <i class="fa fa-rss"></i></a>
 
         <input type="hidden" name="token" value="{{calendar_feed.feed_token}}"/>
         <button type="submit" class="close" aria-label="Close"><span aria-hidden="true"><i class="fa fa-trash"></i></span></button>
@@ -47,10 +47,10 @@
 
       <div class="col-md-5 col-md-offset-2 well">
         <form method="POST" action="/calendar/feeds/regenerate/">
-        <a href="webcal://{{current_host}}/feed/{{team_view_feed.feed_token}}/ical.ics">Team view feed <i class="fa fa-rss"></i></a>
+        <a href="webcal://{{current_host}}/feed/{{team_view_feed.feed_token}}/ical.ics">Umpan tinjauan tim <i class="fa fa-rss"></i></a>
 
         <input type="hidden" name="token" value="{{team_view_feed.feed_token}}"/>
-        <button type="submit" class="close" aria-label="Close"><span aria-hidden="true"><i class="fa fa-trash"></i></span></button>
+        <button type="submit" class="close" aria-label="Tutup"><span aria-hidden="true"><i class="fa fa-trash"></i></span></button>
         </form>
       </div>
 

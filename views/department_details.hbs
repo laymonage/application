@@ -1,15 +1,15 @@
 
 {{> header }}
 
-<h1>{{department.name}} details</h1>
+<h1>Detail untuk {{department.name}}</h1>
 
 <form method="post" action="/settings/departments/delete/{{ department.id }}/">
   <div class="row">
     <div class="col-md-3 lead">
-      Department details
+      Detail untuk departemen
     </div>
     <div class="col-md-1 col-md-offset-8">
-      <button id="remove_btn" type="submit" class="pull-right btn btn-danger" data-toggle="tooltip" data-placement="top" title="Remove department"><i class="fa fa-trash"></i> Delete</button>
+      <button id="remove_btn" type="submit" class="pull-right btn btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus departemen"><i class="fa fa-trash"></i> Hapus</button>
     </div>
   </div>
 </form>
@@ -19,8 +19,8 @@
 {{> show_flash_messages }}
 
 <div class="col-md-3 list-group">
-  <a href="/settings/departments/edit/{{department.id}}/" class="list-group-item selected-item">General details</a>
-  <a href="/users/?department={{ department.id }}" class="list-group-item">Employees from department</a>
+  <a href="/settings/departments/edit/{{department.id}}/" class="list-group-item selected-item">Detail umum</a>
+  <a href="/users/?department={{ department.id }}" class="list-group-item">Karyawan dari departemen</a>
 </div>
 
 

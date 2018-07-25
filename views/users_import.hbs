@@ -1,12 +1,12 @@
 
 {{> header }}
 
-<h1>Employees bulk import</h1>
+<h1>Impor massal karyawan</h1>
 
 <div class="row">
-  <div class="col-md-6 lead">Quick employees import</div>
+  <div class="col-md-6 lead">Impor cepat karyawan</div>
   <div class="col-md-6">
-    <a class="btn btn-default pull-right" href="/users/add/" id="add_new_department">Add single employee <i class="fa fa-chevron-right"></i></a>
+    <a class="btn btn-default pull-right" href="/users/add/" id="add_new_department">Tambahkan satu karyawan <i class="fa fa-chevron-right"></i></a>
   </div>
 
 </div>
@@ -16,14 +16,14 @@
 <div class="row">
   <div class="col-md-6">
     <ol class="breadcrumb">
-      <li><a href="/users/">All Employees</a></li>
-      <li class="active">Import employees in a bulk</li>
+      <li><a href="/users/">Semua Karyawan</a></li>
+      <li class="active">Impor massal karyawan</li>
     </ol>
   </div>
 </div>
 
 <div class="row main-row_header">
-  <p class="col-md-12">Do it in three simple steps</p>
+  <p class="col-md-12">Lakukan dengan 3 langkah sederhana</p>
 </div>
 
 <div class="row">
@@ -31,7 +31,7 @@
 
     <form class="form-horizontal" method="POST" action="/users/import-sample/" id="users_import_sample_form">
       <p class="text-bigger">
-        <strong>1.</strong> Download example of <strong>.CSV</strong> file based on employees currently available:
+        <strong>1.</strong> Unduh contoh berkas <strong>.CSV</strong> berdasarkan karyawan yang saat ini tersedia:
         <button
           type  = "submit"
           id    = "users_import_sample_btn"
@@ -40,23 +40,23 @@
           data-placement = "top"
           data-toggle    = "popover"
           data-trigger   = "focus hover"
-        ><i class="fa fa-download"></i> Download <strong>.CSV</strong> sample file</button>
+        ><i class="fa fa-download"></i> Unduh berkas contoh <strong>.CSV</strong></button>
       </p>
     </form>
 
     <p class="text-bigger">
-      <strong>2.</strong> Amend <strong>.CSV</strong> file to contain new employees details.
+      <strong>2.</strong> Ubah berkas <strong>.CSV</strong> untuk menambahkan detail karyawan baru.
     </p>
 
     <p class="text-bigger">
-      <strong>3.</strong> Upload <strong>.CSV</strong> file:
+      <strong>3.</strong> Unggah berkas <strong>.CSV</strong>:
 
       <form action="/users/import/" method="post" role="form" enctype="multipart/form-data" class="panel-body">
         <div class="form-group">
           <input id="users_input_inp" type="file" name="users_import">
         </div>
         <div class="form-group">
-          <button class="btn btn-success" id="submit_users_btn" type="submit"><i class="fa fa-upload"></i> Import employees</input>
+          <button class="btn btn-success" id="submit_users_btn" type="submit"><i class="fa fa-upload"></i> Impor karyawan</input>
         </div>
       </form>
     </p>

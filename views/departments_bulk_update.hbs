@@ -1,15 +1,15 @@
 
 {{> header }}
 
-<h1>Departments</h1>
+<h1>Departemen</h1>
 
 {{> show_flash_messages }}
 
 <div class="row">
-  <div class="col-md-4 lead">Departments settings bulk edit</div>
+  <div class="col-md-4 lead">Pengaturan massal setelan departemen</div>
   <div class="col-md-4 col-md-offset-4">
-    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#add_new_department_modal" type="button" id="add_new_department_btn">Add new department</button>
-    <a href='/settings/departments/'class="btn btn-link pull-right">Overview</a>
+    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#add_new_department_modal" type="button" id="add_new_department_btn">Tambahkan departemen baru</button>
+    <a href='/settings/departments/'class="btn btn-link pull-right">Tinjauan</a>
   </div>
 </div>
 
@@ -17,10 +17,10 @@
 <div class="row">&nbsp;</div>
 
 <div class="row">
-    <div class="col-md-4"><label class="control-label">Name</label></div>
-    <div class="col-md-3"><label class="control-label">Allowance</label></div>
-    <div class="col-md-3"><label class="control-label">Manager</label></div>
-    <div class="col-md-2"><label class="control-label">Number of Users</label></div>
+    <div class="col-md-4"><label class="control-label">Nama</label></div>
+    <div class="col-md-3"><label class="control-label">Jatah Cuti</label></div>
+    <div class="col-md-3"><label class="control-label">Manajer</label></div>
+    <div class="col-md-2"><label class="control-label">Banyaknya Pengguna</label></div>
 </div>
 
 <div class="row">&nbsp;</div>
@@ -31,7 +31,7 @@
 
 {{# unless departments.length }}
 <div class="row">
-    <div class="col-md-4">No department records</div>
+    <div class="col-md-4">Tidak ada data departemen</div>
 </div>
 {{/unless}}
 
@@ -52,7 +52,7 @@
 
     <div class="col-md-2">
         <input name="include_public_holidays__{{@index}}" id="include_public_holidays__{{@index}}" type="checkbox" {{#if include_public_holidays}}checked="checked"{{/if}}>
-        <label for="include_public_holidays__{{@index}}" class="control-label">Public holidays</label>
+        <label for="include_public_holidays__{{@index}}" class="control-label">Hari libur nasional</label>
     </div>
 
     <div class="col-md-3">
@@ -77,9 +77,9 @@
 
 <div class="row">
   <div class="col-md-offset-9 col-md-3">
-    <button type="submit" class="btn btn-success pull-right">Save changes</button>
+    <button type="submit" class="btn btn-success pull-right">Simpan perubahan</button>
     <span class="pull-right">&nbsp;&nbsp;&nbsp;</span>
-    <a href='/settings/departments-bulk-update/' class="btn btn-link pull-right">Cancel</a>
+    <a href='/settings/departments-bulk-update/' class="btn btn-link pull-right">Batal</a>
   </div>
 </div>
 

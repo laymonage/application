@@ -1,12 +1,12 @@
 
 {{> header }}
 
-<h1>New company</h1>
+<h1>Kantor baru</h1>
 
 {{> show_flash_messages }}
 
 <div class="row">
-  <div class="col-md-6 lead">Register new company account and supervisor user</div>
+  <div class="col-md-6 lead">Daftarkan akun kantor baru dan pengawasnya</div>
 </div>
 
 <div class="row">
@@ -14,52 +14,52 @@
     <form class="form-horizontal" action="/register" method="post">
 
       <div class="form-group">
-        <label for="company_name_inp" class="col-md-2 control-label">Company name</label>
+        <label for="company_name_inp" class="col-md-2 control-label">Nama kantor</label>
         <div class="col-md-6">
-          <input class="form-control" id="company_name_inp" placeholder="Company name" name="company_name" required>
+          <input class="form-control" id="company_name_inp" placeholder="Nama kantor" name="company_name" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="name_inp" class="col-md-2 control-label">First Name</label>
+        <label for="name_inp" class="col-md-2 control-label">Nama Depan</label>
         <div class="col-md-6">
-          <input class="form-control" id="name_inp" placeholder="First name" name="name" required>
+          <input class="form-control" id="name_inp" placeholder="Nama depan" name="name" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="lastname_inp" class="col-md-2 control-label">Last Name</label>
+        <label for="lastname_inp" class="col-md-2 control-label">Nama Belakang</label>
         <div class="col-md-6">
-          <input class="form-control" id="lastname_inp" placeholder="Last Name" name="lastname" required>
+          <input class="form-control" id="lastname_inp" placeholder="Nama belakang" name="lastname" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="email_inp" class="col-md-2 control-label">Email Address</label>
+        <label for="email_inp" class="col-md-2 control-label">Alamat Surel</label>
         <div class="col-md-6">
-          <input class="form-control" id="email_inp" type="email" placeholder="Email" name="email" required>
+          <input class="form-control" id="email_inp" type="email" placeholder="Surel" name="email" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="pass_inp" class="col-md-2 control-label">Password</label>
+        <label for="pass_inp" class="col-md-2 control-label">Kata Sandi</label>
         <div class="col-md-6">
-          <input class="form-control" id="pass_inp" type="password" placeholder="Password" name="password" required>
+          <input class="form-control" id="pass_inp" type="password" placeholder="Kata sandi" name="password" required>
         </div>
       </div>
 
 
       <div class="form-group">
-        <label for="confirm_pass_inp" class="col-md-2 control-label">Confirm Password</label>
+        <label for="confirm_pass_inp" class="col-md-2 control-label">Konfirmasi Kata Sandi</label>
         <div class="col-md-6">
-          <input class="form-control" id="confirm_pass_inp" type="password" placeholder="Password" name="password_confirmed" required>
+          <input class="form-control" id="confirm_pass_inp" type="password" placeholder="Kata sandi" name="password_confirmed" required>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="country_inp" class="col-md-2 control-label">Country</label>
+        <label for="country_inp" class="col-md-2 control-label">Negara</label>
         <div class="col-md-6">
-          <select class="form-control" id="country_inp" placeholder="Country name" name="country">
+          <select class="form-control" id="country_inp" placeholder="Nama negara" name="country">
             {{#each countries}}
             <option value="{{@key}}" {{#if this.default }} selected="selected" {{/if}}>{{@key}}: {{this.name}}</option>
             {{/each}}
@@ -68,9 +68,9 @@
       </div>
 
       <div class="form-group">
-        <label for="timezone_inp" class="col-md-2 control-label">Time zone</label>
+        <label for="timezone_inp" class="col-md-2 control-label">Zona Waktu</label>
         <div class="col-md-6">
-          <select class="form-control" id="timezone_inp" placeholder="Time zone" name="timezone">
+          <select class="form-control" id="timezone_inp" placeholder="Zona waktu" name="timezone">
             {{#each timezones_available}}
             <option value="{{this}}" {{#if_equal this 'Europe/London' }} selected="selected" {{/if_equal}}>{{this}}</option>
             {{/each}}
@@ -80,7 +80,7 @@
 
       <div class="form-group">
         <div class="col-md-offset-2 col-md-6">
-          <button id="submit_registration" type="submit" class="btn btn-success">Create</button>
+          <button id="submit_registration" type="submit" class="btn btn-success">Buat</button>
         </div>
       </div>
 

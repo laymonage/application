@@ -1,10 +1,10 @@
 
 {{> header }}
 
-<h1>Team View</h1>
+<h1>Tinjauan Tim</h1>
 
 <div class="row">
-    <div class="col-md-6 lead">{{logged_user.name}} {{logged_user.lastname}}'s team <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export Team View to external calendars"><span class="fa fa-rss"></span></a></div>
+    <div class="col-md-6 lead">Tim {{logged_user.name}} {{logged_user.lastname}} <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export Team View to external calendars"><span class="fa fa-rss"></span></a></div>
 </div>
 
 {{> show_flash_messages }}
@@ -38,11 +38,11 @@
         <td class="team-view-header" colspan="2">
           <div class="dropdown pull-left">
             <button class="btn btn-default dropdown-toggle left-column-cell" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-              {{# if current_department }}{{current_department.name}}{{else}}All departments{{/if}}
+              {{# if current_department }}{{current_department.name}}{{else}}Semua departemen{{/if}}
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="?{{> team_view_url_parameters current_department = null }}">All</a></li>
+              <li><a href="?{{> team_view_url_parameters current_department = null }}">Semua</a></li>
               <li role="separator" class="divider"></li>
               {{#each related_departments}}
               <li><a href="?{{> team_view_url_parameters base_date = ../base_date current_department = this }}">{{this.name}}</a></li>
@@ -64,7 +64,7 @@
           <td>
             <span class="teamview-deducted-days"
               {{# if statistics }}
-              data-content="In {{as_date_formatted ../base_date 'MMMM, YYYY' }} {{# with this.user }}{{this.full_name}} used {{../statistics.deducted_days }} days from allowance{{/with}}"
+              data-content="Dalam {{as_date_formatted ../base_date 'MMMM, YYYY' }} {{# with this.user }}{{this.full_name}} menggunakan {{../statistics.deducted_days }} hari dari jatah cuti{{/with}}"
               data-placement="right"
               data-toggle="popover"
               data-trigger="focus hover"

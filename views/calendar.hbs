@@ -1,10 +1,10 @@
 
 {{> header }}
 
-<h1>Employee calendar</h1>
+<h1>Kalender karyawan</h1>
 
 <div class="row">
-    <div class="col-md-6 lead">{{logged_user.name}} {{logged_user.lastname}}'s calendar for {{current_year}}</div>
+    <div class="col-md-6 lead">Kalender {{logged_user.name}} {{logged_user.lastname}} untuk {{current_year}}</div>
     <div class="col-md-6">
     </div>
 </div>
@@ -14,7 +14,7 @@
 <div class="row">&nbsp;</div>
 
 <div class="row main-row_header hidden-xs">
-  <div class="col-md-12">Statistics</div>
+  <div class="col-md-12">Statistik</div>
 </div>
 
 <div class="row">
@@ -23,8 +23,8 @@
     <dl>
       {{#with current_user }}
       <dt data-tom-days-available-in-allowance>{{ ../user_allowance.number_of_days_available_in_allowance }}</dt>
-      <dd>Days available</dd>
-      <dd>out of <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span> in allowance</dd>
+      <dd>Hari tersedia</dd>
+      <dd>dari <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span> jatah cuti</dd>
       {{/with}}
     </dl>
   </div>
@@ -35,30 +35,30 @@
 
   <div class="col-md-3 secondary-leave-type-statistics hidden-xs">
     <dl>
-      <dt>Used so far</dt>
+      <dt>Telah digunakan</dt>
 
       {{# if leave_type_statistics }}
         {{# each leave_type_statistics }}
-          <dd><em>{{this.leave_type.name}}:</em> <span class="pull-right">{{this.days_taken}}{{# if this.limit}} out of {{this.limit}}{{/if}}</span></dd>
+          <dd><em>{{this.leave_type.name}}:</em> <span class="pull-right">{{this.days_taken}}{{# if this.limit}} dari {{this.limit}}{{/if}}</span></dd>
         {{/each}}
       {{else}}
 
-        <dd class="text-muted">No approved requests so far.</dd>
+        <dd class="text-muted">Belum ada permohonan yang disetujui.</dd>
       {{/if}}
     </dl>
   </div>
 
   <div class="col-md-3 secondary-leave-type-statistics hidden-xs">
     <dl>
-      <dt>Details</dt>
+      <dt>Detail</dt>
       {{~# each supervisors  ~}}
       <dd>
-        <em>{{# if  @first }} Supervisor: {{ else   }}  &nbsp;   {{/ if  }}</em>
+        <em>{{# if  @first }} Pengawas: {{ else   }}  &nbsp;   {{/ if  }}</em>
         <span class="pull-right"><a href="mailto:{{this.email}}">{{ this.full_name }}</a></span>
       </dd>
       {{~/ each ~}}
-      <dd><em>Department:</em> <span class="pull-right"><a href="/calendar/teamview/?department={{ current_user.department.id }}">{{ current_user.department.name }}</a></span></dd>
-      <dd><em>Allowance in {{current_year}}:</em><span class="pull-right"> {{ user_allowance.total_number_of_days_in_allowance }} days</span><dd>
+      <dd><em>Departemen:</em> <span class="pull-right"><a href="/calendar/teamview/?department={{ current_user.department.id }}">{{ current_user.department.name }}</a></span></dd>
+      <dd><em>Jatah cuti di {{current_year}}:</em><span class="pull-right"> {{ user_allowance.total_number_of_days_in_allowance }} hari</span><dd>
     </dl>
   </div>
 
@@ -69,7 +69,7 @@
 
 
 <div class="row main-row_header">
-  <div class="col-md-12">Calendar <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export absences  to external calendars"><span class="fa fa-rss"></span></a></div>
+  <div class="col-md-12">Kalender <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Ekspor absen ke kalender eksternal"><span class="fa fa-rss"></span></a></div>
 </div>
 
 <div class="row">
@@ -80,13 +80,13 @@
   </div>
   <div class="col-md-8 calendar-section-caption">
 
-    <strong>{{#if show_full_year}}January - December {{current_year}}{{else}}Upcoming Months{{/if}}</strong>
+    <strong>{{#if show_full_year}}Januari - Desember {{current_year}}{{else}}Bulan yang akan datang{{/if}}</strong>
     &nbsp;
 
     {{# unless show_full_year}}
-    <a class="btn btn-default" href="/calendar/?show_full_year=1">More... &nbsp;<span class="fa fa-plus"></span></a>
+    <a class="btn btn-default" href="/calendar/?show_full_year=1">Selengkapnya... &nbsp;<span class="fa fa-plus"></span></a>
     {{else}}
-    <a class="btn btn-default" href="/calendar/">Less... &nbsp;<span class="fa fa-minus"></span></a>
+    <a class="btn btn-default" href="/calendar/">Sesingkatnya... &nbsp;<span class="fa fa-minus"></span></a>
     {{/unless}}
 
 
@@ -110,13 +110,13 @@
             <td colspan="14">{{#if ../show_full_year}}{{this.month}}{{else}}{{as_date_formatted this.moment 'MMMM, YYYY'}}{{/if}}</td>
         </tr>
         <tr>
+            <td colspan="2">Sn</td>
+            <td colspan="2">Sl</td>
+            <td colspan="2">R</td>
+            <td colspan="2">K</td>
+            <td colspan="2">J</td>
+            <td colspan="2">Sb</td>
             <td colspan="2">M</td>
-            <td colspan="2">T</td>
-            <td colspan="2">W</td>
-            <td colspan="2">T</td>
-            <td colspan="2">F</td>
-            <td colspan="2">S</td>
-            <td colspan="2">S</td>
         </tr>
         </thead>
         <tbody>
@@ -137,7 +137,7 @@
 {{# unless show_full_year}}
 
   <div class="row main-row_header">
-    <p class="col-md-12">All my absences in {{current_year}}</p>
+    <p class="col-md-12">Semua absensi saya di {{current_year}}</p>
   </div>
 
   {{> user_requests leaves=current_user.my_leaves }}

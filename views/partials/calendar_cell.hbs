@@ -20,11 +20,11 @@
           data-toggle="tooltip"
           data-placement="top"
           title="
-            {{#if ../../day.is_current_day}}Today{{/if}}
-            {{#if this.is_new_leave}}New absence waiting approval{{/if}}
-            {{#if this.is_pended_revoke_leave}}Revoked waiting for approval{{/if}}
+            {{#if ../../day.is_current_day}}Hari ini{{/if}}
+            {{#if this.is_new_leave}}Absensi baru menunggu persetujuan{{/if}}
+            {{#if this.is_pended_revoke_leave}}Dicabut menunggu persetujuan{{/if}}
             {{#if this.is_approved_leave}}
-              {{#unless this.is_pended_revoke_leave}}Approved absence{{/unless}}
+              {{#unless this.is_pended_revoke_leave}}Absensi disetujui{{/unless}}
             {{/if}}"
         {{/if}}
       {{/with}}
@@ -34,13 +34,13 @@
   {{#if day.is_current_day}}
     data-toggle="tooltip"
     data-placement="top"
-    title="Today"
+    title="Hari ini"
   {{/if}}
 
   {{#if day.is_bank_holiday}}
     data-toggle="tooltip"
     data-placement="top"
-    title="Bank holiday: {{day.bank_holiday_name}}"
+    title="Hari libur nasional: {{day.bank_holiday_name}}"
   {{/if}}
 
 >{{day.val}}</span>
