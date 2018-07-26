@@ -66,8 +66,8 @@
             {{#each ../allowance_options}}{{#if_equal this.value ../allowance}}{{caption}}{{/if_equal}}{{/each}}
           </td>
           <td><a href="/users/?department={{ this.id }}">{{this.users.length}}</a></td>
-          <td>{{# if this.include_public_holidays }}Yes{{/if}}</td>
-          <td>{{# if this.is_accrued_allowance }}Yes{{/if}}</td>
+          <td>{{# if this.include_public_holidays }}Ya{{/if}}</td>
+          <td>{{# if this.is_accrued_allowance }}Ya{{/if}}</td>
           <td><a href="/settings/departments/edit/{{this.id}}/" class="btn btn-link btn-xs pull-right"><span class="fa fa-chevron-right"></span></a></td>
         </tr>
         {{/each}}
